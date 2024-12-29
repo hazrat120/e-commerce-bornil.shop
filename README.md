@@ -6,42 +6,61 @@ An e-commerce website typically consists of multiple modules like products, user
 
 ### **Basic Project Directory Structure**
 
-```plaintext
 ecommerce-website/
 │
-├── backend/                # Server-side code (APIs, database, business logic)
-│   ├── config/             # Configuration files (database, environment variables)
-│   ├── controllers/        # Business logic for handling requests
-│   ├── models/             # Database models (product, user, orders)
-│   ├── routes/             # API routes (RESTful routes for products, users, etc.)
-│   ├── services/           # Additional services (e.g., payment gateway integration)
-│   ├── utils/              # Utility functions (validators, middleware)
-│   ├── app.js              # Main server configuration (Express app or any framework)
-│   ├── server.js           # Server startup file
-│   └── package.json        # Node.js dependencies and scripts
+├── backend/ # Server-side code (PHP, business logic, and database interactions)
+│ ├── config/ # Configuration files (database, environment variables)
+│ │ └── database.php # MySQL connection settings
+│ ├── controllers/ # Controllers for handling HTTP requests
+│ │ ├── ProductController.php # Handle product-related logic
+│ │ ├── UserController.php # Handle user authentication and registration
+│ │ └── OrderController.php # Handle order processing
+│ ├── models/ # Database models (Product, User, Order, etc.)
+│ │ ├── Product.php # Product model (for interacting with the products table)
+│ │ ├── User.php # User model (for handling user data)
+│ │ └── Order.php # Order model (for managing orders)
+│ ├── routes/ # API routes (handling the mapping of URLs to controllers)
+│ │ ├── productRoutes.php # Routes for products (GET, POST, etc.)
+│ │ ├── userRoutes.php # Routes for user actions (login, registration)
+│ │ └── orderRoutes.php # Routes for order actions (create, update, delete)
+│ ├── services/ # Additional services (payment gateways, email notifications)
+│ │ └── PaymentService.php # Handle payments with external APIs like Stripe or PayPal
+│ ├── utils/ # Utility functions (validators, middlewares)
+│ │ ├── Validator.php # Input validation (user input, product data)
+│ │ └── AuthMiddleware.php # Authentication middleware
+│ ├── .htaccess # Apache config for URL rewriting
+│ ├── index.php # Entry point of the application (routing, request handling)
+│ ├── config.php # General application configuration (settings)
+│ └── .env # Environment variables (e.g., DB credentials, API keys)
 │
-├── frontend/               # Client-side code (HTML, CSS, JS, React/Vue, etc.)
-│   ├── public/             # Public files (index.html, images, fonts)
-│   ├── src/                # Source code (components, pages, assets)
-│   │   ├── assets/         # Images, icons, and static files
-│   │   ├── components/     # Reusable components (navbar, footer, buttons)
-│   │   ├── pages/          # Pages (home, product details, cart, checkout)
-│   │   ├── services/       # API service calls (fetching products, orders, etc.)
-│   │   ├── styles/         # CSS or SASS files for styling
-│   │   ├── App.js          # Root component (for React or other frameworks)
-│   │   └── index.js        # Entry point for frontend (React, Vue, etc.)
-│   ├── package.json        # Frontend dependencies (React, Vue, etc.)
-│   └── webpack.config.js   # Webpack configuration (if needed)
+├── frontend/ # Client-side code (HTML, CSS, JS)
+│ ├── public/ # Public files (index.html, images, fonts)
+│ │ ├── index.html # Main HTML page
+│ │ └── assets/ # Static assets (images, icons)
+│ ├── src/ # Source code (components, pages)
+│ │ ├── components/ # Reusable components (navbar, footer, buttons)
+│ │ ├── pages/ # Pages (home, product details, cart, checkout)
+│ │ ├── services/ # API calls for interacting with the backend (e.g., Axios or Fetch API)
+│ │ └── styles/ # CSS or SASS files for styling
+│ ├── js/ # JavaScript files (interactivity, DOM manipulation)
+│ ├── package.json # Frontend dependencies (e.g., React, Vue, Webpack)
+│ ├── webpack.config.js # Webpack config (for bundling frontend code)
+│ └── README.md # Frontend project documentation
 │
-├── database/               # Database scripts (migrations, seed data)
-│   ├── migrations/         # Database migrations (creating tables)
-│   ├── seeders/            # Initial data for testing or launching
-│   └── schema.sql          # SQL schema or database structure
+├── database/ # Database scripts (migrations, schema, seeding)
+│ ├── migrations/ # SQL migration files (creating/updating tables)
+│ │ ├── create_products_table.sql # SQL script for creating products table
+│ │ ├── create_users_table.sql # SQL script for creating users table
+│ │ └── create_orders_table.sql # SQL script for creating orders table
+│ ├── seeders/ # Initial seed data for testing or launching
+│ │ ├── product_seeder.sql # Seed data for products table
+│ │ └── user_seeder.sql # Seed data for users table
+│ └── schema.sql # Full schema for the database (if needed)
 │
-├── .env                    # Environment variables (API keys, database info)
-├── README.md               # Project documentation
-└── package.json            # Global dependencies (for the entire project)
-```
+├── .env # Environment variables (e.g., DB credentials, API keys)
+├── .gitignore # Git ignore file to exclude unnecessary files (node_modules, logs, etc.)
+├── README.md # Project documentation
+└── composer.json # PHP project dependencies (via Composer)
 
 ---
 
