@@ -2,7 +2,7 @@
       <div class="sa-app__sidebar">
         <div class="sa-sidebar">
           <div class="sa-sidebar__header">
-            <a class="sa-sidebar__logo" href="index.html"
+            <a class="sa-sidebar__logo" href="/../bornil.shop/backend/dashboard.php"
               ><!-- logo -->
               <div class="sa-sidebar-logo">
                 <svg
@@ -27,7 +27,7 @@
                 </div>
                 <ul class="sa-nav__menu sa-nav__menu--root">
                   <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
-                    <a href="index.html" class="sa-nav__link"
+                    <a href="/../bornil.shop/backend/dashboard.php" class="sa-nav__link"
                       ><span class="sa-nav__icon"
                         ><svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -76,13 +76,13 @@
                       data-sa-collapse-content=""
                     >
                       <li class="sa-nav__menu-item">
-                        <a href="app-products-list.html" class="sa-nav__link"
+                        <a href="/../bornil.shop/backend/components/catalog/products_list.php" class="sa-nav__link"
                           ><span class="sa-nav__menu-item-padding"></span
                           ><span class="sa-nav__title">Products List</span></a
                         >
                       </li>
                       <li class="sa-nav__menu-item">
-                        <a href="app-product.html" class="sa-nav__link"
+                        <a href="/../bornil.shop/backend/components/catalog/products.php" class="sa-nav__link"
                           ><span class="sa-nav__menu-item-padding"></span
                           ><span class="sa-nav__title">Product</span></a
                         >
