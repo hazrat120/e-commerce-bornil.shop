@@ -91,7 +91,7 @@
                   <div class="sa-entity-layout__sidebar">
                     <?php include_once "./visibility.php" ?>
 
-                    <?php include_once "./categories.php" ?>
+                    <?php include_once "./add_categories.php" ?>
 
                     <?php include_once "./tags.php" ?>
                   </div>

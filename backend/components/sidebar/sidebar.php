@@ -88,7 +88,7 @@
                         >
                       </li>
                       <li class="sa-nav__menu-item">
-                        <a href="app-categories-list.html" class="sa-nav__link"
+                        <a href="/../bornil.shop/backend/components/catalog/categories_list.php" class="sa-nav__link"
                           ><span class="sa-nav__menu-item-padding"></span
                           ><span class="sa-nav__title">Categories List</span></a
                         >

@@ -138,6 +138,15 @@
                 class="dropdown-menu dropdown-menu-end"
                 aria-labelledby="dropdownMenuButton3"
               >
+              <li>
+                  <a class="dropdown-item d-flex align-items-center" href="#"
+                    ><img
+                      src="../../images/Flag_of_Bangladesh.png"
+                      class="sa-language-icon me-3"
+                      alt=""
+                    /><span class="ps-2">Bangladesh</span></a
+                  >
+                </li>
                 <li>
                   <a class="dropdown-item d-flex align-items-center" href="#"
                     ><img

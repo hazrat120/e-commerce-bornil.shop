@@ -157,7 +157,7 @@
                                     class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg"
                                   >
                                     <img
-                                      src="images/products/product-16-1-40x40.jpg"
+                                      src="../../images/products/product-16-1-40x40.jpg"
                                       width="40"
                                       height="40"
                                       alt=""
@@ -206,7 +206,7 @@
                                     class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg"
                                   >
                                     <img
-                                      src="images/products/product-16-2-40x40.jpg"
+                                      src="../../images/products/product-16-2-40x40.jpg"
                                       width="40"
                                       height="40"
                                       alt=""
@@ -255,7 +255,7 @@
                                     class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg"
                                   >
                                     <img
-                                      src="images/products/product-16-3-40x40.jpg"
+                                      src="../../images/products/product-16-3-40x40.jpg"
                                       width="40"
                                       height="40"
                                       alt=""
@@ -304,7 +304,7 @@
                                     class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg"
                                   >
                                     <img
-                                      src="images/products/product-16-4-40x40.jpg"
+                                      src="../../images/products/product-16-4-40x40.jpg"
                                       width="40"
                                       height="40"
                                       alt=""

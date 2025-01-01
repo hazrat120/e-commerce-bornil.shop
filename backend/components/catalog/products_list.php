@@ -2096,7 +2096,6 @@
           <div class="m-auto"></div>
           <div>
             Powered by HTML — Design by
-            <a href="https://themeforest.net/user/kos9/portfolio">Kos</a>
           </div>
           <!-- copyright / end -->
         </div>
