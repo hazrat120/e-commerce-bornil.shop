@@ -94,7 +94,7 @@
                         >
                       </li>
                       <li class="sa-nav__menu-item">
-                        <a href="app-category.html" class="sa-nav__link"
+                        <a href="/../bornil.shop//backend//components/catalog/category.php" class="sa-nav__link"
                           ><span class="sa-nav__menu-item-padding"></span
                           ><span class="sa-nav__title">Category</span></a
                         >
@@ -135,13 +135,13 @@
                       data-sa-collapse-content=""
                     >
                       <li class="sa-nav__menu-item">
-                        <a href="app-customers-list.html" class="sa-nav__link"
+                        <a href="/../bornil.shop/backend/components/customers/customers_list.php" class="sa-nav__link"
                           ><span class="sa-nav__menu-item-padding"></span
                           ><span class="sa-nav__title">Customers List</span></a
                         >
                       </li>
                       <li class="sa-nav__menu-item">
-                        <a href="app-customer.html" class="sa-nav__link"
+                        <a href="/../bornil.shop/backend/components/customers/customer.php" class="sa-nav__link"
                           ><span class="sa-nav__menu-item-padding"></span
                           ><span class="sa-nav__title">Customer</span></a
                         >
@@ -182,13 +182,13 @@
                       data-sa-collapse-content=""
                     >
                       <li class="sa-nav__menu-item">
-                        <a href="app-orders-list.html" class="sa-nav__link"
+                        <a href="/../bornil.shop/backend/components/orders/orders_list.php" class="sa-nav__link"
                           ><span class="sa-nav__menu-item-padding"></span
                           ><span class="sa-nav__title">Orders List</span></a
                         >
                       </li>
                       <li class="sa-nav__menu-item">
-                        <a href="app-order.html" class="sa-nav__link"
+                        <a href="/../bornil.shop/backend/components/orders/order_details.php" class="sa-nav__link"
                           ><span class="sa-nav__menu-item-padding"></span
                           ><span class="sa-nav__title">Order Details</span></a
                         >

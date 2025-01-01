@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <title>categories list</title>
+    <title>Order list</title>
     <!-- icon -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <!-- fonts -->
@@ -53,7 +53,7 @@
       <!-- sa-app__sidebar / end --><!-- sa-app__content -->
       <div class="sa-app__content">
         <!-- sa-app__toolbar -->
-        <?php include_once "../toolbar/toolbar.php" ?>
+       <?php include_once "../toolbar/toolbar.php"?>
         <!-- sa-app__toolbar / end --><!-- sa-app__body -->
         <div id="top" class="sa-app__body">
           <div class="mx-sm-2 px-2 px-sm-3 px-xxl-4 pb-6">
@@ -67,15 +67,15 @@
                           <a href="index.html">Dashboard</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                          Categories
+                          Orders
                         </li>
                       </ol>
                     </nav>
-                    <h1 class="h3 m-0">Categories</h1>
+                    <h1 class="h3 m-0">Orders</h1>
                   </div>
                   <div class="col-auto d-flex">
-                    <a href="app-category.html" class="btn btn-primary"
-                      >New category</a
+                    <a href="app-order.html" class="btn btn-primary"
+                      >New order</a
                     >
                   </div>
                 </div>
@@ -84,15 +84,15 @@
                 <div class="p-4">
                   <input
                     type="text"
-                    placeholder="Start typing to search for categories"
+                    placeholder="Start typing to search for orders"
                     class="form-control form-control--search mx-auto"
                     id="table-search"
                   />
                 </div>
                 <div class="sa-divider"></div>
                 <table
-                  class="sa-datatables-init"
-                  data-order='[[ 1, "asc" ]]'
+                  class="sa-datatables-init text-nowrap"
+                  data-order='[[ 1, "desc" ]]'
                   data-sa-search-input="#table-search"
                 >
                   <thead>
@@ -104,9 +104,13 @@
                           aria-label="..."
                         />
                       </th>
-                      <th class="min-w-15x">Name</th>
+                      <th>Number</th>
+                      <th>Date</th>
+                      <th>Customer</th>
+                      <th>Paid</th>
+                      <th>Status</th>
                       <th>Items</th>
-                      <th>Visibility</th>
+                      <th>Total</th>
                       <th class="w-min" data-orderable="false"></th>
                     </tr>
                   </thead>
@@ -120,18 +124,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Headlights &amp; Lighting</a
+                        <a href="app-order.html" class="text-reset">#3201</a>
+                      </td>
+                      <td>June 26, 2021</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Jessica Moore</a
                         >
                       </td>
-                      <td>3</td>
-                      <td><div class="badge badge-sa-success">Visible</div></td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Yes</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-danger">New</div>
+                        </div>
+                      </td>
+                      <td>3 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">200</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
+                      </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-0"
+                            id="order-context-menu-0"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -149,7 +173,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-0"
+                            aria-labelledby="order-context-menu-0"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -180,18 +204,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Interior Parts</a
+                        <a href="app-order.html" class="text-reset">#2091</a>
+                      </td>
+                      <td>May 15, 2021</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Helena Garcia</a
                         >
                       </td>
-                      <td>15</td>
-                      <td><div class="badge badge-sa-primary">8 March</div></td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-secondary">No</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-primary">Pending</div>
+                        </div>
+                      </td>
+                      <td>7 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">5,023</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
+                      </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-1"
+                            id="order-context-menu-1"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -209,7 +253,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-1"
+                            aria-labelledby="order-context-menu-1"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -240,18 +284,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Floor Mats</a
+                        <a href="app-order.html" class="text-reset">#1937</a>
+                      </td>
+                      <td>February 23, 2021</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Helena Garcia</a
                         >
                       </td>
-                      <td>0</td>
-                      <td><div class="badge badge-sa-success">Visible</div></td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-secondary">No</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Shipped</div>
+                        </div>
+                      </td>
+                      <td>1 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">703</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
+                      </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-2"
+                            id="order-context-menu-2"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -269,7 +333,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-2"
+                            aria-labelledby="order-context-menu-2"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -300,18 +364,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Gauges</a
+                        <a href="app-order.html" class="text-reset">#1724</a>
+                      </td>
+                      <td>December 10, 2020</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Ryan Ford</a
                         >
                       </td>
-                      <td>0</td>
-                      <td><div class="badge badge-sa-success">Visible</div></td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-warning">Partial</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Shipped</div>
+                        </div>
+                      </td>
+                      <td>2 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">1,200</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
+                      </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-3"
+                            id="order-context-menu-3"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -329,7 +413,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-3"
+                            aria-labelledby="order-context-menu-3"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -360,18 +444,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Consoles &amp; Organizers</a
+                        <a href="app-order.html" class="text-reset">#1603</a>
+                      </td>
+                      <td>August 27, 2020</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Helena Garcia</a
                         >
                       </td>
-                      <td>0</td>
-                      <td><div class="badge badge-sa-success">Visible</div></td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Yes</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-secondary">Canceled</div>
+                        </div>
+                      </td>
+                      <td>12 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">3,701</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
+                      </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-4"
+                            id="order-context-menu-4"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -389,7 +493,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-4"
+                            aria-labelledby="order-context-menu-4"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -420,18 +524,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Mobile Electronics</a
+                        <a href="app-order.html" class="text-reset">#1544</a>
+                      </td>
+                      <td>June 15, 2020</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Olivia Smith</a
                         >
                       </td>
-                      <td>0</td>
-                      <td><div class="badge badge-sa-success">Visible</div></td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Yes</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Shipped</div>
+                        </div>
+                      </td>
+                      <td>1 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">127</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
+                      </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-5"
+                            id="order-context-menu-5"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -449,7 +573,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-5"
+                            aria-labelledby="order-context-menu-5"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -480,18 +604,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Steering Wheels</a
+                        <a href="app-order.html" class="text-reset">#1501</a>
+                      </td>
+                      <td>May 29, 2020</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Kevin Smith</a
                         >
                       </td>
-                      <td>0</td>
-                      <td><div class="badge badge-sa-success">Visible</div></td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Yes</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Shipped</div>
+                        </div>
+                      </td>
+                      <td>2 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">2,299</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
+                      </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-6"
+                            id="order-context-menu-6"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -509,7 +653,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-6"
+                            aria-labelledby="order-context-menu-6"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -540,18 +684,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Cargo Accessories</a
+                        <a href="app-order.html" class="text-reset">#1429</a>
+                      </td>
+                      <td>May 2, 2020</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Charlotte Jones</a
                         >
                       </td>
-                      <td>0</td>
-                      <td><div class="badge badge-sa-success">Visible</div></td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-warning">Partial</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Shipped</div>
+                        </div>
+                      </td>
+                      <td>1 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">794</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
+                      </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-7"
+                            id="order-context-menu-7"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -569,7 +733,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-7"
+                            aria-labelledby="order-context-menu-7"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -600,20 +764,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Engine &amp; Drivetrain</a
+                        <a href="app-order.html" class="text-reset">#1373</a>
+                      </td>
+                      <td>March 9, 2020</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Jacob Lee</a
                         >
                       </td>
-                      <td>0</td>
                       <td>
-                        <div class="badge badge-sa-secondary">Hidden</div>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Yes</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-primary">Pending</div>
+                        </div>
+                      </td>
+                      <td>28 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">27,899</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
                       </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-8"
+                            id="order-context-menu-8"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -631,7 +813,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-8"
+                            aria-labelledby="order-context-menu-8"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -662,18 +844,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Repair Manuals</a
+                        <a href="app-order.html" class="text-reset">#1288</a>
+                      </td>
+                      <td>February 12, 2020</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Isabel Williams</a
                         >
                       </td>
-                      <td>45</td>
-                      <td><div class="badge badge-sa-success">Visible</div></td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Yes</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Shipped</div>
+                        </div>
+                      </td>
+                      <td>4 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">4,302</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
+                      </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-9"
+                            id="order-context-menu-9"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -691,7 +893,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-9"
+                            aria-labelledby="order-context-menu-9"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -722,18 +924,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Suspension</a
+                        <a href="app-order.html" class="text-reset">#1108</a>
+                      </td>
+                      <td>January 25, 2020</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Anna Wilson</a
                         >
                       </td>
-                      <td>28</td>
-                      <td><div class="badge badge-sa-success">Visible</div></td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Yes</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-success">Shipped</div>
+                        </div>
+                      </td>
+                      <td>1 items</td>
+                      <td>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">239</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
+                      </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-10"
+                            id="order-context-menu-10"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -751,7 +973,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-10"
+                            aria-labelledby="order-context-menu-10"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -782,82 +1004,38 @@
                         />
                       </td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Fuel Systems</a
+                        <a href="app-order.html" class="text-reset">#1002</a>
+                      </td>
+                      <td>January 3, 2020</td>
+                      <td>
+                        <a href="app-customer.html" class="text-reset"
+                          >Adam Taylor</a
                         >
                       </td>
-                      <td>11</td>
                       <td>
-                        <div class="badge badge-sa-danger">For premium</div>
-                      </td>
-                      <td>
-                        <div class="dropdown">
-                          <button
-                            class="btn btn-sa-muted btn-sm"
-                            type="button"
-                            id="category-context-menu-11"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            aria-label="More"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="3"
-                              height="13"
-                              fill="currentColor"
-                            >
-                              <path
-                                d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z"
-                              ></path>
-                            </svg>
-                          </button>
-                          <ul
-                            class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-11"
-                          >
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
-                            <li>
-                              <a class="dropdown-item" href="#">Duplicate</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">Add tag</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">Remove tag</a>
-                            </li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li>
-                              <a class="dropdown-item text-danger" href="#"
-                                >Delete</a
-                              >
-                            </li>
-                          </ul>
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-secondary">No</div>
                         </div>
                       </td>
-                    </tr>
-                    <tr>
                       <td>
-                        <input
-                          type="checkbox"
-                          class="form-check-input m-0 fs-exact-16 d-block"
-                          aria-label="..."
-                        />
+                        <div class="d-flex fs-6">
+                          <div class="badge badge-sa-secondary">Canceled</div>
+                        </div>
                       </td>
+                      <td>7 items</td>
                       <td>
-                        <a href="app-category.html" class="text-reset"
-                          >Air Filters</a
-                        >
-                      </td>
-                      <td>0</td>
-                      <td>
-                        <div class="badge badge-sa-secondary">Hidden</div>
+                        <div class="sa-price">
+                          <span class="sa-price__symbol">$</span
+                          ><span class="sa-price__integer">5,103</span
+                          ><span class="sa-price__decimal">.00</span>
+                        </div>
                       </td>
                       <td>
                         <div class="dropdown">
                           <button
                             class="btn btn-sa-muted btn-sm"
                             type="button"
-                            id="category-context-menu-12"
+                            id="order-context-menu-11"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             aria-label="More"
@@ -875,7 +1053,7 @@
                           </button>
                           <ul
                             class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="category-context-menu-12"
+                            aria-labelledby="order-context-menu-11"
                           >
                             <li><a class="dropdown-item" href="#">Edit</a></li>
                             <li>
@@ -909,7 +1087,7 @@
           <div class="m-auto"></div>
           <div>
             Powered by HTML — Design by
-            
+            <a href="https://themeforest.net/user/kos9/portfolio">Kos</a>
           </div>
           <!-- copyright / end -->
         </div>
